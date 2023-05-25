@@ -1,0 +1,319 @@
+body {
+    margin: 0 !important;
+   
+}
+
+aside {
+    background-color: rgb(42, 65, 165);
+    grid-area: aside;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-menu {
+    color: #ffffff;
+    display: none;
+
+}
+
+.desktop-menu li {
+    list-style: none;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    align-items: center;
+    
+}
+
+menu {
+    display: flex;
+    color: white;
+    
+}
+
+.fa-solid {
+    margin-right: 1rem;
+}
+
+.fa-bars {
+    color: white;
+}
+
+nav {
+    background-color: rgb(225, 232, 233);
+    grid-area: nav;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+select {
+    width: 80%;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 0;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+section {
+    background-color: white;
+    grid-area: section;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto auto;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+section a {
+    text-decoration: none;
+    color: #070707;
+}
+
+.grid img {
+    width: 100%;
+    border: 0.5px solid rgb(119, 119, 221);
+    border-radius: 5px;
+
+}
+
+
+.icono {
+    display: flex;
+}
+
+.pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; 
+    color: #070707;
+}
+
+.pagina a {
+    border: 1px solid black;
+    padding: 0.5rem;
+   text-decoration: none;
+   color: #070707;
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    
+}
+
+
+
+button {
+    background-color: rgb(42, 65, 165);
+    width: 5rem;
+    color: white;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+footer {
+    background-color: #012F6C;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    margin-top: 1rem;
+    color: white;
+    
+
+}
+
+.fa-brands {
+    margin-right: 1rem;
+    
+}
+
+
+main {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    "aside"
+    "nav"
+    "section"
+    "footer";
+    height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 0;
+}
+
+
+
+.desktop-image{
+    display: none;
+}
+
+/* DESKTOP */
+@media (width >= 576px ) {
+
+    .desktop-menu, .desktop-image {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+   aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   }
+
+   menu {
+    display: flex;
+    flex-direction: column;
+    
+    
+
+   }
+
+   .icono {
+    display: flex;
+    color: white;
+   }
+
+   .icono:hover{
+    color: #021518;
+   }
+
+ li:hover {
+   color: #021518;
+
+   }
+   
+   
+   .redes:hover {
+    color: #070707;
+   }
+
+   .grid a:hover{
+    color: white;
+   }
+
+   
+
+    main {
+        display: grid;
+        grid-template-areas:
+    "aside nav"
+    "aside section"
+    "footer section";
+        height: 100vh;
+        grid-template-columns: 25% auto;
+        grid-template-rows: 20% auto ;
+    }
+
+    .cars-container{
+        background-color: white;
+        grid-area: "section";
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto auto auto;
+        display: grid;
+        
+    }
+
+    .hamburger-icon,fa-solid {
+        display: none;
+    }
+
+    .grid img {
+        width: 100%;
+    }
+
+}
+
+/* ESCRITORIO */
+@media only screen and (width>= 992px) {
+
+    .desktop-menu, .desktop-image {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+       
+    }
+
+   aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   }
+
+   menu {
+    display: flex;
+    flex-direction: column;
+    
+    
+
+   }
+
+
+
+   .icono {
+    display: flex;
+    color: white;
+   }
+
+    main {
+        display: grid;
+        grid-template-areas:
+    "aside nav"
+    "aside section"
+    "footer section";
+        height: 100vh;
+        grid-template-columns: 25% auto;
+        grid-template-rows: 20% auto 15%;
+    }
+
+    .cars-container{
+        background-color: white;
+        grid-area: "section";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows:  auto auto;
+        display: grid;
+    }
+
+    .hamburger-icon.fa-solid {
+        display: none;
+    }
+
+    .grid img {
+        width: 100%;
+    }
+
+}
+
+
